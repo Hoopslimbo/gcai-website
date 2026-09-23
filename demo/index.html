@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ondra Demo — Try GCAI free in your browser | GCAI</title>
+<meta name="description" content="Try the Ondra Demo: the free, customizable GCAI AI assistant. Custom appearance, wake word with chime, voice input and output, themes, weather, and recipes — right in your browser.">
+<meta name="keywords" content="Ondra Demo, GCAI demo, try Ondra AI, customizable AI assistant demo, free AI demo">
+<meta name="author" content="GCAI">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gcai.js.org/demo/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ondra Demo — Try GCAI free in your browser">
+<meta property="og:description" content="The free, customizable GCAI AI assistant. Custom appearance, wake word, voices, themes — right in your browser.">
+<meta property="og:url" content="https://gcai.js.org/demo/">
+<meta property="og:image" content="https://gcai.js.org/logo.webp">
+<link rel="icon" type="image/jpeg" href="../icon.jpg">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ondra Demo",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://hoopslimbo.github.io/gcai-demo/gcai-demo.html",
+  "description": "The free demo of GCAI's Ondra AI assistant: a customizable appearance, wake word with chime, voice input and output, themes, weather, recipes, and a clock — right in your browser."
+}
+</script>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../">
+    <img src="../logo.webp" alt="GCAI logo" width="36" height="36">
+    <span>GCAI</span>
+  </a>
+  <nav>
+    <a href="../#top">About GCAI</a>
+    <a href="../#faq">Questions</a>
+  </nav>
+  <a class="btn btn-small" href="https://hoopslimbo.github.io/gcai-demo/gcai-demo.html" data-demo-link>Launch demo</a>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="hero-logo" src="../logo.webp" alt="GCAI logo — a rainbow ribbon folded into a hexagon badge" width="120" height="120">
+    <h1>The Ondra Demo</h1>
+    <p class="tagline">Free. No install. No account.</p>
+    <p class="lede">This is GCAI running live — the customizable AI assistant. Choose its appearance, pick its voice, say the wake word, and start talking. It opens right in your browser.</p>
+    <div class="cta-row">
+      <a class="btn btn-big" href="https://hoopslimbo.github.io/gcai-demo/gcai-demo.html" data-demo-link>Launch the demo now</a>
+    </div>
+    <p class="fineprint">First time? It opens in a new tab, ready when you are. Talk or type — your call.</p>
+  </section>
+
+  <section>
+    <h2>What you get in the demo</h2>
+    <p class="section-sub">Everything below is live in the demo today.</p>
+    <div class="cards">
+      <article class="card">
+        <h3>Custom appearance</h3>
+        <p>A visual identity that represents your assistant. Set its colors and style, and choose your wallpaper.</p>
+      </article>
+      <article class="card">
+        <h3>Wake word + chime</h3>
+        <p>Say the wake word and Ondra answers with a chime you choose, so you know it's listening.</p>
+      </article>
+      <article class="card">
+        <h3>Voice interaction</h3>
+        <p>Speak instead of typing. Choose from multiple voices for replies, or mute responses entirely.</p>
+      </article>
+      <article class="card">
+        <h3>Themes</h3>
+        <p>Switch between themes to restyle the entire experience instantly.</p>
+      </article>
+      <article class="card">
+        <h3>Weather &amp; recipes</h3>
+        <p>Ask for the weather or look up a recipe — answers appear in a clean popup with live results.</p>
+      </article>
+      <article class="card">
+        <h3>Clock</h3>
+        <p>A built-in clock, right where you need it.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>One thing to know</h2>
+    <p class="section-sub">The demo runs on <strong>computers only</strong> — Windows, Mac, or Linux with a modern browser such as Google Chrome. It isn't available on phones or tablets. Want the full thing? That's <a href="../#ondra">Ondra</a>, coming soon.</p>
+    <div class="cta-row">
+      <a class="btn btn-big" href="https://hoopslimbo.github.io/gcai-demo/gcai-demo.html" data-demo-link>Launch the demo</a>
+    </div>
+    <p class="fineprint"><a href="../">← Back to GCAI home</a></p>
+  </section>
+</main>
+
+<footer>
+  <p><strong>GCAI</strong> — Genuinely Customizable Artificial Intelligence</p>
+  <p><a href="https://hoopslimbo.github.io/gcai-demo/gcai-demo.html" data-demo-link>Try the Ondra Demo</a></p>
+  <p class="fineprint">© 2026 GCAI. Built by Hoopslimbo.</p>
+</footer>
+<script>
+(function () {
+  function isMobileDevice() {
+    var ua = navigator.userAgent || '';
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)) return true;
+    // iPadOS 13+ reports as Macintosh; catch it via touch support
+    return /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
+  }
+  function showComputerOnlyMessage() {
+    if (document.querySelector('.computer-only-overlay')) return;
+    var overlay = document.createElement('div');
+    overlay.className = 'computer-only-overlay';
+    var box = document.createElement('div');
+    box.className = 'computer-only-box';
+    var msg = document.createElement('p');
+    msg.textContent = 'This software is only accessible through computers. Please try again on a computer';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'OK';
+    box.appendChild(msg);
+    box.appendChild(btn);
+    overlay.appendChild(box);
+    overlay.addEventListener('click', function () { overlay.remove(); });
+    document.body.appendChild(overlay);
+    setTimeout(function () { overlay.remove(); }, 5000);
+  }
+  if (!isMobileDevice()) return;
+  document.querySelectorAll('a[data-demo-link]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      showComputerOnlyMessage();
+    });
+  });
+})();
+</script>
+</body>
+</html>

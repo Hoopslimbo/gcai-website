@@ -1,0 +1,149 @@
+:root {
+  --bg: #0b0e14;
+  --bg2: #11151d;
+  --card: #151b26;
+  --text: #eef1f6;
+  --muted: #9aa3b2;
+  --rainbow: linear-gradient(90deg, #ff5f6d, #ffc371, #f9f871, #7bf59b, #6ec6ff, #b388ff);
+  --radius: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; }
+
+/* Nav */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(11, 14, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1e2532;
+}
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; font-weight: 800; font-size: 1.2rem; letter-spacing: 0.08em; }
+.brand img { border-radius: 8px; }
+.nav nav { display: flex; gap: 1.2rem; margin-left: auto; }
+.nav nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
+.nav nav a:hover { color: var(--text); }
+
+/* Buttons */
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700;
+  background: var(--rainbow); color: #0b0e14;
+  border-radius: 999px; padding: 0.55rem 1.3rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255, 95, 109, 0.25); }
+.btn-big { font-size: 1.1rem; padding: 0.9rem 2.2rem; }
+.btn-small { font-size: 0.9rem; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(179, 136, 255, 0.12), transparent);
+}
+.hero-logo { border-radius: 24px; margin-bottom: 1rem; }
+.hero h1 {
+  font-size: 4rem; letter-spacing: 0.12em; font-weight: 900;
+  background: var(--rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.tagline { font-size: 1.3rem; color: var(--muted); margin-top: 0.3rem; }
+.lede { max-width: 620px; margin: 1.2rem auto 0; font-size: 1.15rem; }
+.cta-row { margin-top: 2rem; }
+.fineprint { color: var(--muted); font-size: 0.9rem; margin-top: 1rem; }
+
+/* Sections */
+section { max-width: 960px; margin: 0 auto; padding: 3.5rem 1.5rem; }
+section h2 { font-size: 2rem; margin-bottom: 0.6rem; }
+.section-sub { color: var(--muted); margin-bottom: 1.8rem; font-size: 1.05rem; }
+.about p { font-size: 1.1rem; color: #d4d9e2; max-width: 720px; }
+
+/* Cards */
+.cards {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card {
+  background: var(--card);
+  border: 1px solid #232c3d;
+  border-radius: var(--radius);
+  padding: 1.4rem;
+}
+.card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.card p { color: var(--muted); font-size: 0.97rem; }
+.demo .cta-row, .ondra .cta-row { text-align: center; }
+
+/* Ondra */
+.pill {
+  font-size: 0.8rem; font-weight: 700; vertical-align: middle;
+  background: var(--rainbow); color: #0b0e14;
+  border-radius: 999px; padding: 0.25rem 0.8rem; margin-left: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* FAQ */
+.faq details {
+  background: var(--card); border: 1px solid #232c3d;
+  border-radius: var(--radius); padding: 1rem 1.3rem; margin-bottom: 0.8rem;
+}
+.faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; }
+.faq details p { color: var(--muted); margin-top: 0.6rem; }
+
+/* Footer */
+footer {
+  text-align: center; padding: 2.5rem 1.5rem;
+  border-top: 1px solid #1e2532; color: var(--muted);
+}
+footer p { margin-bottom: 0.4rem; }
+footer a { color: var(--text); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .nav nav { display: none; }
+  .nav .btn-small { margin-left: auto; }
+  .hero h1 { font-size: 2.8rem; }
+  .hero { padding: 3.5rem 1.2rem 3rem; }
+}
+
+/* Computer-only demo guard */
+.computer-only-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+.computer-only-box {
+  background: #111827;
+  color: #f9fafb;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  max-width: 24rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.computer-only-box p {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+.computer-only-box button {
+  background: #f9fafb;
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
