@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gcai.pages.dev/gcai/</loc>
+    <loc>https://gcai-website.pages.dev/gcai/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gcai.pages.dev/ondra/</loc>
+    <loc>https://gcai-website.pages.dev/ondra/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gcai.pages.dev/faq/</loc>
+    <loc>https://gcai-website.pages.dev/faq/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gcai.pages.dev/demo/</loc>
+    <loc>https://gcai-website.pages.dev/demo/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
