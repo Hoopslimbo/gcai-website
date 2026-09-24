@@ -89,10 +89,11 @@ section h2 { font-size: 2rem; margin-bottom: 0.6rem; }
 .pill {
   display: inline-block; white-space: nowrap;
   font-size: 0.8rem; font-weight: 700; vertical-align: middle;
-  background: var(--rainbow); color: #0b0e14;
+  background: #fff; color: #0b0e14;
   border-radius: 999px; padding: 0.25rem 0.8rem; margin-left: 0.5rem;
   letter-spacing: 0.02em;
 }
+h2 .pill { background: var(--rainbow); }
 
 /* FAQ */
 .faq details {
