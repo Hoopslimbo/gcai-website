@@ -80,7 +80,8 @@ section h2 { font-size: 2rem; margin-bottom: 0.6rem; }
   border-radius: var(--radius);
   padding: 1.4rem;
 }
-.card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+.card h3 .pill { margin-left: 0; flex-shrink: 0; }
 .card p { color: var(--muted); font-size: 0.97rem; }
 .demo .cta-row, .ondra .cta-row { text-align: center; }
 
