@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gcai.js.org/sitemap.xml
+Sitemap: https://gcai.pages.dev/sitemap.xml
