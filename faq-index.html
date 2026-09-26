@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — GCAI</title>
+<meta name="description" content="Frequently asked questions about GCAI (Genuinely Customizable Artificial Intelligence), Ondra, and the free Ondra Demo.">
+<meta name="author" content="Hoopslimbo">
+<link rel="icon" type="image/png" href="../gcai-badge.png">
+<style>
+  :root {
+    --bg: #0b0e14;
+    --card: #151b26;
+    --text: #eef1f6;
+    --muted: #9aa3b2;
+    --rainbow: linear-gradient(90deg, #ff5f6d, #ffc371, #f9f871, #7bf59b, #6ec6ff, #b388ff);
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; gap: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(11, 14, 20, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1e2532;
+  }
+  .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; font-weight: 800; font-size: 1.2rem; letter-spacing: 0.08em; }
+  .brand img { border-radius: 8px; height: auto; }
+  .nav nav { display: flex; gap: 0.7rem; margin-left: auto; align-items: center; }
+
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700;
+    background: var(--rainbow); color: #0b0e14;
+    border-radius: 999px; padding: 0.55rem 1.3rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255, 95, 109, 0.25); }
+  .btn-big { font-size: 1.1rem; padding: 0.9rem 2.2rem; }
+  .btn-small { font-size: 0.9rem; }
+  .btn-solid { background: #eef1f6; color: #000; font-weight: 800; }
+  .btn-solid:hover { box-shadow: 0 8px 24px rgba(238, 241, 246, 0.22); }
+
+  main { max-width: 820px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+  h1 { font-size: 2.6rem; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+  .lede { color: var(--muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
+  h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; }
+
+  details {
+    background: var(--card);
+    border: 1px solid #232c3d;
+    border-radius: var(--radius);
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  summary { font-weight: 700; font-size: 1.05rem; cursor: pointer; }
+  summary::-webkit-details-marker { color: #8ab4ff; }
+  details p { color: #c9d1de; margin-top: 0.6rem; }
+  details a { color: #8ab4ff; font-weight: 600; }
+
+  .cta-row { margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  footer {
+    text-align: center; padding: 2.5rem 1.5rem;
+    border-top: 1px solid #1e2532; color: var(--muted);
+  }
+  footer p { margin-bottom: 0.4rem; }
+  footer a { color: var(--text); font-weight: 600; }
+
+  .o-mark { display: inline-block; vertical-align: -0.18em; }
+  /* Computer-only demo guard */
+  .computer-only-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 9999; padding: 1.5rem;
+  }
+  .computer-only-box {
+    background: #111827; color: #f9fafb;
+    border: 1px solid #374151; border-radius: 12px;
+    padding: 1.5rem 1.75rem; max-width: 24rem; text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  .computer-only-box p { margin: 0 0 1rem; line-height: 1.5; }
+  .computer-only-box button {
+    background: #f9fafb; color: #111827; border: none; border-radius: 8px;
+    padding: 0.6rem 1.6rem; font-size: 1rem; font-weight: 600; cursor: pointer;
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 2rem; }
+    main { padding: 2.5rem 1.2rem 3rem; }
+    .nav { flex-wrap: wrap; gap: 0.7rem 1rem; padding: 0.8rem 1rem; }
+    .nav nav { flex-basis: 100%; justify-content: center; margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../gcai/">
+    <img src="../gcai-badge.png" alt="GCAI logo" width="36" height="36">
+    <span>GCAI</span>
+  </a>
+  <nav>
+    <a class="btn btn-small btn-solid" href="../gcai/">GCAI</a>
+    <a class="btn btn-small btn-solid" href="../ondra/">Ondra</a>
+    <a class="btn btn-small btn-solid" href="./">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Frequently asked questions</h1>
+  <p class="lede">Everything about GCAI, Ondra, and the free demo — in one place.</p>
+
+  <h2>About GCAI</h2>
+  <details>
+    <summary>What is GCAI?</summary>
+    <p>GCAI is an independent artificial intelligence project building genuinely incredible features — an assistant that talks you through any task on your screen, builds working apps from a sentence, and more — shaped around the individual: your voice, your style, your way of working.</p>
+  </details>
+  <details>
+    <summary>What does GCAI stand for?</summary>
+    <p>Genuinely Customizable Artificial Intelligence.</p>
+  </details>
+  <details>
+    <summary>Who is behind GCAI?</summary>
+    <p>GCAI is built by Hoopslimbo — an independent project, developed and shaped with direct feedback from the people who use it.</p>
+  </details>
+  <details>
+    <summary>What makes GCAI different from other AI assistants?</summary>
+    <p>Most assistants ship as a finished product with a short feature list. GCAI starts from the opposite assumption — that your assistant should do incredible things, and feel like yours while doing them. Deep customization isn't an add-on here; it's part of the point.</p>
+  </details>
+
+  <h2><img class="o-mark" src="../ondra-o.svg" alt="Ondra O mark" width="26" height="26"> Ondra and the demo</h2>
+  <details>
+    <summary>What problems does Ondra solve?</summary>
+    <p>Ondra exists because most AI is a stranger you adapt to, instead of an assistant that adapts to you. Specifically:</p>
+    <p><strong>The "figure it out yourself" problem.</strong> Most software help is a tutorial, a video, or a support ticket. <strong>Screen Coach</strong> ends that — Ondra watches your screen and talks you through any task, click by click, in the moment. Nobody has to translate a tutorial into their own situation.</p>
+    <p><strong>The "AI is a stranger" problem.</strong> Other assistants arrive as a finished product you adapt to. Ondra becomes <em>yours</em> — appearance, voice, wake word, tab icon, and unlock codes that open up new AI styles, voices, and add-ons. Small stuff, but it's the difference between using a tool and having <em>your</em> assistant.</p>
+    <p><strong>Everyday friction.</strong> The coming features attack the little things that cost you time: asking the time anywhere in the world, checking what's on your computer and how much storage is left, getting things done across your accounts and services, notes you can save and edit, opening tabs on command, and emails written from a single sentence — so you spend less time juggling apps and more time doing the thing.</p>
+  </details>
+  <details>
+    <summary>What is Ondra?</summary>
+    <p>Ondra is GCAI's flagship project: an AI assistant currently in development, with incredible features on the way — Screen Coach and more. You choose its appearance, its voice, and the wake word that calls it.</p>
+  </details>
+  <details>
+    <summary>What is the Ondra Demo?</summary>
+    <p>A free, working demo of Ondra that runs entirely in your browser. It includes voice interaction, a custom wake word and chime, weather, a live clock, and more.</p>
+  </details>
+  <details>
+    <summary>Is the demo free?</summary>
+    <p>Yes — completely free. No account, no payment, no install. Open it in your browser and start talking.</p>
+  </details>
+  <details>
+    <summary>What do I need to run the demo?</summary>
+    <p>A computer (Windows, Mac, or Linux) with a modern browser such as Google Chrome. The demo isn't available on phones or tablets.</p>
+  </details>
+  <details>
+    <summary>How do I say the name "Ondra"?</summary>
+    <p>It's pronounced ON-drah.</p>
+  </details>
+
+  <h2>What's next</h2>
+  <details>
+    <summary>What's coming to Ondra?</summary>
+    <p>Several features are in the works: <strong>Screen Coach</strong>, which watches your screen and talks you through any task step by step; a <strong>world clock</strong> that shows the time anywhere on the planet; deeper <strong>computer access</strong> for questions about your files and storage; <strong>connected accounts</strong> so Ondra can get things done across your services; saveable, editable <strong>notes</strong>; the ability to <strong>open tabs</strong> on command; an <strong>email writer</strong> that generates and sends emails; <strong>monthly rewards</strong> for every month you're subscribed; and an <strong>icon generator</strong> for designing your AI's icon — background color, icon, and icon color — shown in the browser tab.</p>
+  </details>
+  <details>
+    <summary>When does the full version release?</summary>
+    <p>Ondra is still in development, and there's no release date yet. The demo stays free in the meantime.</p>
+  </details>
+  <details>
+    <summary>How can I share feedback or ideas?</summary>
+    <p>There's a feedback option built right into the demo — use it to report bugs or suggest features. Real feedback from real use is what shapes where Ondra goes next.</p>
+  </details>
+
+  <div class="cta-row">
+    <a class="btn btn-big btn-solid" href="https://hoopslimbo.github.io/ondra-demo/ondra-demo.html" data-demo-link>Try the Ondra Demo — free</a>
+  </div>
+</main>
+
+<footer>
+  <p><strong>GCAI</strong> — Genuinely Customizable Artificial Intelligence</p>
+  <p><a href="../gcai/">GCAI</a> · <a href="../ondra/">Ondra</a> · <a href="./">FAQ</a></p>
+  <p>© 2026 GCAI. Built by Hoopslimbo.</p>
+</footer>
+
+<script>
+(function () {
+  function isMobileDevice() {
+    var ua = navigator.userAgent || '';
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)) return true;
+    // iPadOS 13+ reports as Macintosh; catch it via touch support
+    return /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
+  }
+  function showComputerOnlyMessage() {
+    if (document.querySelector('.computer-only-overlay')) return;
+    var overlay = document.createElement('div');
+    overlay.className = 'computer-only-overlay';
+    var box = document.createElement('div');
+    box.className = 'computer-only-box';
+    var msg = document.createElement('p');
+    msg.textContent = 'This software is only accessible through computers. Please try again on a computer';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'OK';
+    box.appendChild(msg);
+    box.appendChild(btn);
+    overlay.appendChild(box);
+    overlay.addEventListener('click', function () { overlay.remove(); });
+    document.body.appendChild(overlay);
+    setTimeout(function () { overlay.remove(); }, 5000);
+  }
+  if (!isMobileDevice()) return;
+  document.querySelectorAll('a[data-demo-link]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      showComputerOnlyMessage();
+    });
+  });
+})();
+</script>
+</body>
+</html>
